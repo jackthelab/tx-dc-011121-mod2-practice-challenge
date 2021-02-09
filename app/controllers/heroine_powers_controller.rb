@@ -10,7 +10,6 @@ class HeroinePowersController < ApplicationController
 
     def create
         @heroine_power = HeroinePower.new(strong_params)
-
         if @heroine_power.save
             redirect_to heroine_path(strong_params[:heroine_id])
         else

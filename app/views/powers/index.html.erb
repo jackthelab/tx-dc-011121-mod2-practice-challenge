@@ -6,6 +6,8 @@
       <%= link_to power.name, power_path(power) %>
       <br>
       Description: <%= power.description %>
+      <br>
+      No. of Heroines w/ Powers: <%= pluralize(power.heroines.count, "Heroine") %>
     </li>
   <% end %>
 </ul>
