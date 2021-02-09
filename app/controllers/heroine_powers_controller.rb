@@ -13,7 +13,7 @@ class HeroinePowersController < ApplicationController
         if @heroine_power.save
             redirect_to heroine_path(strong_params[:heroine_id])
         else
-            redirect_to new_heroine_power_path
+            render :new
         end
     end
 
