@@ -86,3 +86,7 @@ input[type="submit"] {
  margin: 24px 0 0 0;
  cursor: pointer;
 }
+
+.error {
+  color: red;
+}

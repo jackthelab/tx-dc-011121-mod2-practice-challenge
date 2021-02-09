@@ -15,8 +15,10 @@
 
 <% end %>
 
-<% if @heroine_power.errors.any? %>
+<% if flash[:errors] %>
 
-    <div class="error"><%= @heroine_power.errors.messages.values.first[0] %></div>
+    <% flash[:errors].each do |message| %>
+        <div class="error"><%= message %></div>
+    <% end %>
 
 <% end %>

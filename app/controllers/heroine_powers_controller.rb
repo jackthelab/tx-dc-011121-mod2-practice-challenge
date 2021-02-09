@@ -13,7 +13,9 @@ class HeroinePowersController < ApplicationController
         if @heroine_power.save
             redirect_to heroine_path(strong_params[:heroine_id])
         else
-            render :new
+            flash[:errors] = @heroine_power.errors.full_messages
+            # byebug
+            redirect_to new_heroine_power_path
         end
     end
 
