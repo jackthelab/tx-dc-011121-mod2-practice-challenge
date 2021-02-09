@@ -1,3 +1,16 @@
 <h1>New Heroine Power</h1>
 
-<p>Some form</p>
+<%= form_with model: @heroine_power do |form| %>
+
+    <%= form.label :heroine_id, "Choose a Heroine" %>
+    <%= form.collection_select :heroine_id, Heroine.order(:super_name), :id, :super_name %>
+
+    <%= form.label :power_id, "Choose a Power" %>
+    <%= form.collection_select :power_id, Power.order(:name), :id, :name %>
+
+    <%= form.label :strength, "Is this power 'Weak', 'Average', or 'Strong'?" %>
+    <%= form.text_field :strength %>
+
+    <%= form.submit "Create" %>
+
+<% end %>
